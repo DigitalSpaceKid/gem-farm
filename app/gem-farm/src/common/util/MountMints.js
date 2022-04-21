@@ -1,0 +1,23 @@
+export const metamountMints = [
+    "CsuQfhYc2Y94HqkWG5a9TFh3cnfgpVkL6YMmvvEGGFZJ",
+    "FasBXUMVyYxxDsc1scYYx8yYVny9PgpjxsXegY99zrjK",
+    "5g933y1NuVWjksvDv4DBd11Vpgc82P9Nbd5qKxpCjpGq",
+    "5hwpSedzbKiXKKYbEHyitrCQq1BsL6BfYJ4peoZppVvF",
+    "DPn9PUGgE9ubvapqTAEarquSxRCfuM12X5xnW8XAakAb",
+    "2THNgRi3SbKTqJFygxNKzySGLTPMFPGMJDNh1DoMe3ey",
+    "59fzD3kfZ4MG6WD13Fo4S8vwt85bxE9T7cH8QuZrzM9g",
+    "91oonmwEJL6bGgpeWrd7Q4WreS1spxSwsgpdMmozaX3s",
+    "74ZAm1dsMLuRdTSi8D6yWRFcXWuWBgLMAn5NouV7dfus",
+    "5qeGo89b9ADFKXs88bJk9D7zDRsT4b5sDHdUw6oH54dg",
+    "6EWdiCmV8murHJwmEwFNzLQrHg6tXxx1FXNBy9hdT5Sh",
+    "89gF9MKFdGRw3QGPZvpXusNdtF5S6HaX8Tn6jPKeVTPZ",
+    "Csqsc51LE7hucGSnkAwzb9aAgDVzmLRDho7exKwozQuM",
+    "DkNGyUW6cMMtDdgMq3SdLXmjF3udZjuyjW2A9mvmU49i",
+    "BTP8whSh7jTwSzAXgFNeshA6WLU6gT55bULd4Ea7sH6r",
+    "9WxQZyooK7iKBAbdknYxhLkXNwzojZFrBTcrJ9NqRpUT",
+    "2T3rr7Q1L4ewJxka17jjW5Yzed1QZag7CMygKYXM3v15",
+    "EDseJJ99zrCAybeUgMtdY1poVSzHUem55H8hkpkfv4Ly",
+    "FkYm4okJ5X1ZvB6Sv37PdF8EsG2wbmxgUN94UthzzAZR",
+    "BDwVNAv7rKFC13NspT44tAZAZ5AwY4sxQ52FGskYrBP7",
+    "6VhHb2z3cSFzbwSH2veFy8Nv43D7NCUUiAi3FDX6ZyDw"
+  ]

@@ -9,7 +9,7 @@
       class="nes-btn is-primary mr-5"
       @click="moveNFTsOnChain"
     >
-      Move Gems!
+      Move NFT
     </button>
     <slot />
   </div>
@@ -51,7 +51,7 @@
         v-if="vaultLocked"
         class="locked flex-col justify-center items-center align-center"
       >
-        <p class="mt-10">This vault is locked!</p>
+        <p class="mt-10">Your dogs are staked!</p>
       </div>
     </NFTGrid>
   </div>

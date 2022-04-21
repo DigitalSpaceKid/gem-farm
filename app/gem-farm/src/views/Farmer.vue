@@ -1,15 +1,19 @@
 <template>
-  <ConfigPane />
-  <div v-if="!wallet" class="text-center">Pls connect (burner) wallet</div>
-  <div v-else>
-    <!--farm address-->
-    <div class="nes-container with-title mb-10">
-      <p class="title">Connect to a Farm</p>
-      <div class="nes-field mb-5">
-        <label for="farm">Farm address:</label>
-        <input id="farm" class="nes-input" v-model="farm" />
+  <loading :active='isLoading' :is-full-page="fullPage" :loader='loader' />
+  <div v-if="!wallet" class="flex justify-center mt-10">
+    <div class="justify-center w-1/2 flex flex-col">
+      <div class="w-full mx-auto bg-white ">
+        <div class="text-center mt-2 text-2xl font-medium">DivineDogs</div>
+        <div v-if="farmAcc" class="mt-5 pl-2 font-light">Total DivineDogs Staked: {{ farmAcc.gemsStaked }}</div>
+        <div v-else class="mt-5 pl-2 font-light">DivineDogs Staked: -</div>
+        <div v-if="farmAcc" class="mt-1 pl-2 font-light">% of DivineDogs Staked: {{ Math.floor((parseInt(farmAcc.gemsStaked)/77.0 * 100 ) * 10)/10 }}%</div>
+        <div v-else class="mt-1 pl-2 font-light">% of DivineDogs Staked: -</div>
+        <div v-if="farmAcc && magicEdenFloor && solPrice" class="mt-1 pl-2 font-light">Minimum Value Locked: ${{ (Math.floor((parseInt(farmAcc.gemsStaked) * magicEdenFloor * solPrice) * 100))/100 }}</div>
+        <div v-else class="mt-1 pl-2 font-light">Minimum Value Locked: -</div>
       </div>
+      <ConfigPane />
     </div>
+  </div>
 
     <div v-if="farmerAcc">
       <FarmerDisplay
@@ -53,10 +57,10 @@
           class="nes-btn is-error mr-5"
           @click="endStaking"
         >
-          End cooldown
+          Claim NFT
         </button>
         <button class="nes-btn is-warning" @click="claim">
-          Claim {{ availableA }} A / {{ availableB }} B
+          Claim {{ availableA / (1000000000)  }} $HALO
         </button>
       </Vault>
     </div>
@@ -102,7 +106,7 @@ export default defineComponent({
     });
 
     // --------------------------------------- farmer details
-    const farm = ref<string>();
+    const farm = ref<string>(process.env.VUE_APP_GEM_FARM_PK || "");
     const farmAcc = ref<any>();
 
     const farmerIdentity = ref<string>();
